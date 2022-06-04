@@ -75,8 +75,9 @@ background-color: rgb(17, 16, 16)
 }
 
 .title::-webkit-scrollbar-thumb{
-    background-color:rgb(191, 204, 204);
+    background-color:rgb(65, 70, 70);
     border-radius: 20px;
+    border: 3px solid white;
 }
 
 .description{

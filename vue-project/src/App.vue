@@ -5,8 +5,8 @@
           <h1 class="PageName"><span>Mac</span>Gillis<span>Club</span></h1>
       </router-link>
        <form @submit.prevent="SearchAnimes()" class="search-box">
-              <input type="text" placeholder="What are you looking for?" v-model="search" />
-              <input type="submit" value="Search"/>
+              <input type="text" placeholder="What are you looking for?" v-model="search" class="search-field" />
+              <input type="submit" value="Search" class="search-button" />
             </form>
   </header>
   <main>
@@ -58,12 +58,7 @@ setup() {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Fira Sans', sans-serif;
-  font-un
-
-  &::selection{
-    background: transparentize(#42B883,0.5)
-  }
+  font-family: 'Fira Sans', sans-serif; 
 }
 
 body {
@@ -80,6 +75,57 @@ a {
 
 }
 
+.search-box {
+  background-color: #235392;
+  width:max-content;
+  height: 180%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.search-field{
+height:100%;
+width:80%;
+border: solid;
+border-right: none;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-color: #235392;
+border-width: 8px;
+color: #235392;
+font-size: 15px;
+font-weight: bold;
+font-family: 'Fira Sans', sans-serif;
+padding: 1px;
+}
+
+.search-button{
+height: 90%;
+width: 20%;
+border: solid;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+border-color: #235392;
+border-width: 5px;
+background-color: #235392;
+color: white;
+font-size: 15px;
+font-weight: bold;
+font-family: 'Fira Sans', sans-serif; 
+}
+
+.search-button:hover {
+background:white;
+color: #235392;
+cursor: pointer;
+}
+
+.search-button:active {
+background-color: #235392;
+border-color: #235392;
+color: white;
+}
+
 
 .cardsSet {
   display: grid;
@@ -87,10 +133,11 @@ a {
 }
 
 header{
-  display: inline-block;
+  display: grid;
+  grid-template-columns:auto;
   min-width: 100%;
   justify-content: start;
-  padding: 10px 16px;
+  padding: 1% 1%;
   background-color: #1a232c;
   box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
   

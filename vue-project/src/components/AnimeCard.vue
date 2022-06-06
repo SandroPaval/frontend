@@ -1,9 +1,11 @@
 <template>
    <div class="card">  
-                <img class="image"
+       <a :href="anime.trailer.url">
+           <img class="image"
                         :src="anime.images.jpg.large_image_url"
                         :alt="anime.title + ' Poster'"
-                        />
+             />
+       </a>
                             <div class="textBox">
                                 <a :href="anime.url">
                                     <h2 class="title" >{{anime.title}}</h2> 
@@ -12,9 +14,8 @@
                                         <h3 class="description">rating: {{anime.score}}</h3>
                                         <h3 class="description">episodes: {{anime.episodes}} </h3>
                                         <h3 class="description">from: {{anime.season}} {{anime.year}}</h3>
-                                        <h3 class="description">genre:  {{anime.genres[0].name}}  </h3>
-
-                                </div>
+                                        <h3 class="description">genre:  {{anime.genres[0].name}}</h3>
+                                    </div>
                             </div>  
 
 

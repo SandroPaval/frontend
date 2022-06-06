@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "sass": "^1.52.2",
+    "v-video-embed": "^1.0.8",
     "vue": "^3.2.36",
     "vue-router": "^4.0.15"
   },
@@ -31,6 +32,5 @@
     "rules": {
       "vue/no-multiple-template-root": "off"
     }
-  
-}
+  }
 }
